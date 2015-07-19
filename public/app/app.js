@@ -11,7 +11,7 @@ angular.module('app')
         admin: { auth: function(mvAuth) {
                 return mvAuth.authorizeCurrentUserForRoute('admin'); 
             }
-        }
+        }, 
 
         user: { auth: function(mvAuth) {
 

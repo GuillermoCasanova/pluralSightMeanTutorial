@@ -22,7 +22,7 @@ angular.module('app')
             },
             isAuthorized: function(role) {
 
-                return !!this.currentUser && this.currentUser.roles('admin').indexOf > -1;
+                return !!this.currentUser && this.currentUser.roles.indexOf('admin') > -1;
 
             }
         }

@@ -33,7 +33,7 @@ angular.module('app')
 
             templateUrl: '/app/admin/user-list', 
             controller: 'mvUserListCtrl',
-            resolve: routeRoleChecks.admin; 
+            resolve: routeRoleChecks.admin
         })
 
 });

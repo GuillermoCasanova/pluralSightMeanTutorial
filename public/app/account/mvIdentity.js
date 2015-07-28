@@ -20,9 +20,10 @@ angular.module('app')
                 return !!this.currentUser; 
                 
             },
+
             isAuthorized: function(role) {
 
-                return !!this.currentUser && this.currentUser.roles.indexOf('admin') > -1;
+                return !!this.currentUser && this.currentUser.roles.indexOf(role) > -1;
 
             }
         }

@@ -35,7 +35,11 @@ angular.module('app')
             controller: 'mvUserListCtrl',
             resolve: routeRoleChecks.admin
         })
+        .when('/signup', {
 
+            templateUrl: '/app/account/signup', 
+            controller: 'mvSignupCtrl',
+        })
 });
 
 angular.module('app').run(function($rootScope, $location) {

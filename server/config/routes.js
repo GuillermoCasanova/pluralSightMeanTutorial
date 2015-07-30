@@ -10,6 +10,9 @@ module.exports = function(app) {
     
     app.post('/api/users', users.createUser);
 
+    app.put('/api/users', users.updateUser);
+
+
     app.get('/app/*', function(req, res) {
 
         res.render('../../public/app/' + req.params[0]); 

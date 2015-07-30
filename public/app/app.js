@@ -15,7 +15,7 @@ angular.module('app')
 
         user: { auth: function(mvAuth) {
 
-                return mvAuth.authorizeCurrentUserForRoute('user'); 
+                return mvAuth.authorizeAuthenticatedUserForRoute(); 
             }
         }
 
@@ -38,7 +38,13 @@ angular.module('app')
         .when('/signup', {
 
             templateUrl: '/app/account/signup', 
-            controller: 'mvSignupCtrl',
+            controller: 'mvSignupCtrl'
+        })
+        .when('/profile', {
+
+            templateUrl: '/app/account/profile', 
+            controller: 'mvProfileCtrl',
+            resolve: routeRoleChecks.user
         })
 });
 

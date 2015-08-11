@@ -15,6 +15,8 @@ module.exports = function(app) {
 
 
     app.get('/api/courses', courses.getCourses);
+    app.get('/api/courses/:id', courses.getCoursesById);
+
 
 
     app.get('/app/*', function(req, res) {

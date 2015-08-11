@@ -46,6 +46,12 @@ angular.module('app')
             controller: 'mvProfileCtrl',
             resolve: routeRoleChecks.user
         })
+        .when('/course', {
+
+            templateUrl: '/app/courses/course-list', 
+            controller: 'mvCourseListCtrl'
+        })
+
 });
 
 angular.module('app').run(function($rootScope, $location) {

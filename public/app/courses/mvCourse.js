@@ -8,6 +8,7 @@ angular.module('app').factory('mvCourse', function($resource) {
 
     });
 
+    // Returns data from the CourseResouce variable
     return CourseResource; 
 
 })

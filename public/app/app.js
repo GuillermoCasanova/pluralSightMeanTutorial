@@ -46,10 +46,15 @@ angular.module('app')
             controller: 'mvProfileCtrl',
             resolve: routeRoleChecks.user
         })
-        .when('/course', {
+        .when('/courses', {
 
             templateUrl: '/app/courses/course-list', 
             controller: 'mvCourseListCtrl'
+        })
+        .otherwise('/', {
+            
+            templateUrl: '/app/main/main', 
+            controller: 'mvMainCtrl'
         })
 
 });

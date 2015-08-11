@@ -1,6 +1,7 @@
 
 var auth = require('./auth'), 
     users = require('../controllers/users'), 
+    courses = require('../controllers/courses')
     mongoose = require('mongoose'),
     User = mongoose.model('User'); 
 
@@ -11,6 +12,9 @@ module.exports = function(app) {
     app.post('/api/users', users.createUser);
 
     app.put('/api/users', users.updateUser);
+
+
+    app.get('/api/courses', courses.getCourses);
 
 
     app.get('/app/*', function(req, res) {

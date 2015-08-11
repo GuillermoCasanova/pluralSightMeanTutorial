@@ -14,5 +14,6 @@
 
         tbody
             tr(ng-repeat='course in courses | filter: searchText | orderBy: sortOrder')
-                td {{ course.name }}
+                td
+                    a(href="/courses/{{course._id}}")  {{ course.name }}
                 td {{ course.published | date }}

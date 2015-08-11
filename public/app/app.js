@@ -51,6 +51,11 @@ angular.module('app')
             templateUrl: '/app/courses/course-list', 
             controller: 'mvCourseListCtrl'
         })
+        .when('/courses/:id', {
+
+            templateUrl: '/app/courses/course-details', 
+            controller: 'mvCourseDetailsCtrl'
+        })
         .otherwise('/', {
             
             templateUrl: '/app/main/main', 

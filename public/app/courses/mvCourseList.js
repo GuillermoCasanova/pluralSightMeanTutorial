@@ -1,8 +1,8 @@
-angular.module('app').controller('mvCourseListCtrl', function($scope, mvCachedCourseList) {
+angular.module('app').controller('mvCourseListCtrl', function($scope, mvCachedCourses) {
 
     // Queries data from the mvCachedCourses service which has a cached 
     // version of the data from mvCourse 
-    $scope.courses = mvCachedCourseList.query(); 
+    $scope.courses = mvCachedCourses.query(); 
 
 
     // Creates options for select box to sort list by  

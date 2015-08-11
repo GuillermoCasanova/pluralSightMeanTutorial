@@ -14,6 +14,7 @@ exports.getCourses = function(req, res) {
 
 };
 
+
 exports.getCoursesById = function(req, res) {
 
 

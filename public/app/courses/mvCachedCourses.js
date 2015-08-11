@@ -1,4 +1,4 @@
-angular.module('app').factory('mvCachedCourseList', function(mvCourse) {
+angular.module('app').factory('mvCachedCourses', function(mvCourse) {
         
 
         // Variable to store courseList

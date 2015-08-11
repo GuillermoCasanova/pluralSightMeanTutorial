@@ -1,4 +1,11 @@
 .container
+    
+    .pull-right
+    form.form-inline.top-padding-med
+        .form-group
+            input.form-control(ng-model="searchText", placeholder="Filter Courses")
+        .form-group
+            select.margin-left-med.form-control(ng-model="sortOrder", ng-options="item.value as item.text for item in sortOptions")
     table.table.table-hover.table-striped.table-condensed
         thead
             tr
@@ -6,6 +13,6 @@
                 th Publish Date
 
         tbody
-            tr(ng-repeat='course in courses')
+            tr(ng-repeat='course in courses | filter: searchText | orderBy: sortOrder')
                 td {{ course.name }}
                 td {{ course.published | date }}
